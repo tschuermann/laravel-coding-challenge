@@ -8,9 +8,9 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @livewireStyles
 </head>
-<body class="bg-stone-100 min-h-screen">
-    <div class="w-auto mb-5">
-        <div class="bg-purple py-3 px-4 md:px-16">
+<body class="bg-white min-h-screen">
+    <div class="w-auto mb-5 sticky top-0 z-50">
+        <div class="bg-custom-green py-3 px-4 md:px-16">
             <nav x-data="{ open: false }" class="max-w-4xl mx-auto my-2">
                 <div class="flex items-center justify-between">
                     <a href="{{ route('home') }}">
@@ -42,8 +42,8 @@
                     </div>
                 </div>
                 <div x-show="open" class="md:hidden flex flex-col mt-4 space-y-2">
-                    <a href="{{ route('home') }}" class="font-roboto text-lg px-2 py-1 text-stone-100 bg-purple rounded">Verfassen</a>
-                    <a href="{{ route('challenges.all') }}" class="font-roboto text-lg px-2 py-1 text-stone-100 bg-purple rounded">Übersicht</a>
+                    <a href="{{ route('home') }}" class="font-roboto text-lg px-2 py-1 text-stone-100 bg-custom-green">Verfassen</a>
+                    <a href="{{ route('challenges.all') }}" class="font-roboto text-lg px-2 py-1 text-stone-100 bg-custom-green">Übersicht</a>
                     @guest
                         <a href="{{ route('auth.login') }}" class="font-roboto text-lg inline-flex items-center px-3 py-2 rounded-full text-center text-zinc-800 bg-yellow w-max hover:bg-yellow-300">Login</a>
                     @endguest
@@ -67,7 +67,7 @@
             x-show="show"
             x-transition
             @click="window.scrollTo({ top: 0, behavior: 'smooth' })"
-            class="bg-pink hover:bg-fuchsia-500 text-zinc-800 rounded-full p-4 shadow-lg focus:outline-none"
+            class="bg-yellow hover:bg-yellow-300 text-zinc-800 rounded-full p-4 shadow-lg focus:outline-none"
             title="Nach oben scrollen"
             aria-label="Nach oben scrollen"
         >
@@ -75,6 +75,9 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
             </svg>
         </button>
+    </div>
+    <div class="bg-custom-green h-20 w-full mt-10">
+
     </div>
     @livewireScripts
 </body>

@@ -1,5 +1,5 @@
 <x-layouts.app.sidebar>
-    <form method="POST" action="{{ route('register') }}">
+    <form method="POST" action="{{ route('register') }}" class="min-h-[calc(100vh-250px)]">
         @csrf
 
         <!-- Name -->

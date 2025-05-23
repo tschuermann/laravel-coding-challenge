@@ -4,8 +4,7 @@
 
 @theme {
     --color-yellow: #ffbe0b;
-    --color-purple: #8338ec;
-    --color-pink: #ff006e;
+    --color-custom-green: #087A30;
 
     --font-roboto: "Roboto", sans-serif;
     --font-silkscreen: "Silkscreen", sans-serif;
