@@ -30,12 +30,12 @@ npm install
 cp .env.example .env
 
 4. Umgebungsdatei für SQLite konfigurieren:
-DB_CONNECTION=sqlite
-# DB_HOST=127.0.0.1
-# DB_PORT=3306
-DB_DATABASE=database.sqlite
-# DB_USERNAME=root
-# DB_PASSWORD=
+"DB_CONNECTION=sqlite"
+"# DB_HOST=127.0.0.1"
+"# DB_PORT=3306"
+"DB_DATABASE=database.sqlite"
+"# DB_USERNAME=root"
+"# DB_PASSWORD="
 
 5. Anwendungsschlüssel generieren:
 php artisan key:generate
