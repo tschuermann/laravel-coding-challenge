@@ -7,7 +7,7 @@
             <a href="{{ route('challenges.all', ['filter' => 'all']) }}" class="btn cursor-pointer p-1.5 min-w-18 {{ request('filter', 'all') === 'all' ? 'bg-yellow rounded-full' : '' }}">Alle</a>
         </div>
     @endauth
-    <div class="flex flex-col gap-4 min-h-[calc(100vh-350px)]">
+    <div class="flex flex-col gap-4 min-h-[calc(100vh-300px)]">
         @if($challenges->count())
             <a href="{{ route('challenges.show', $challenges[0]) }}"
             class="rounded-md relative flex flex-col justify-end overflow-hidden w-full max-w-full h-40 md:h-60 bg-cover bg-center"

@@ -20,7 +20,7 @@
             <button wire:click="$set('filter', 'all')" class="btn cursor-pointer p-1.5 min-w-18 {{ $filter === 'all' ? 'bg-yellow rounded-full' : '' }}">Alle</button>
         </div>
     @endauth
-    <div class="flex flex-col gap-4">
+    <div class="flex flex-col gap-4 min-h-[calc(100vh-850px)]">
         @if($challenges->isNotEmpty() )
             @foreach($challenges->slice(0, 4) as $challenge)
                 <a href="{{ route('challenges.show', $challenge) }}" 
@@ -44,7 +44,6 @@
                     </div>
                 </a>
             @endforeach
-        @if($challenges->count() > 4)
             <div class="mt-4 text-center">
                 <a href="{{ route('challenges.all') }}" class="fill-zinc-800 hover:fill-custom-green">
                     <div class="flex flex-row items-center justify-center hover:text-custom-green hover:fill-custom-green">
@@ -53,7 +52,6 @@
                     </div>
                 </a>
             </div>
-        @endif
         @else
             <p>Keine Posts gefunden</p>
         @endif
@@ -71,11 +69,10 @@
                 <div class="flex flex-col">
                     <label for="title" class="w-full font-bold my-1">Titel</label>
                     <input id="title" wire:model="title" maxlength="40" type="text" placeholder="Titel eingeben" class="w-full mb-2 border-2 px-1 border-zinc-200 rounded-md">
-                    <div class="text-sm font-light mb-2">{{ strlen($title ?? '') }}/40 Zeichen</div>
+                    <div class="text-sm font-light mb-2">max. 40 Zeichen</div>
                     @error('title') <span class="text-red-500">{{ $message }}</span> @enderror
                     <label for="text" class="inline-block w-full font-bold my-1">Text</label>
                     <textarea wire:model="body" placeholder="Text" id="body" class="w-full border-2 px-1 border-zinc-200 rounded-md min-h-40"></textarea>
-                    <div class="text-sm font-light mb-2">{{ strlen($body ?? '') }} Zeichen</div>
                     @error('body') <span class="text-red-500">{{ $message }}</span> @enderror
                 </div>
                 <div class="flex flex-col items-center col-span-1 md:col-start-2">
@@ -86,11 +83,11 @@
             </div>
             <label>
                 @guest
-                    <input type="checkbox" wire:model="public" onclick="return false;"/>
+                    <input type="checkbox" wire:model="public" onclick="return false;" class="mt-5"/>
                     Öffentlich sichtbar (um private Posts anzulegen logge Dich bitte ein)
                 @endguest
                 @auth
-                    <input type="checkbox" wire:model="public" />
+                    <input type="checkbox" wire:model="public" class="mt-5"/>
                     Öffentlich sichtbar
                 @endauth
             </label>
