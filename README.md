@@ -18,38 +18,38 @@ Eine Laravel-Anwendung zum Verwalten und Teilen von Beiträgen mit Gast- und Nut
 
 ## Installation
 
-1. Repository klonen:
-git clone https://github.com/tschuermann/laravel-coding-challenge
+### 1. Repository klonen:
+git clone https://github.com/tschuermann/laravel-coding-challenge  
 cd laravel-coding-challenge
 
-2. Abhängigkeiten installieren:
-composer install
+### 2. Abhängigkeiten installieren:
+composer install  
 npm install
 
-3. Umgebungsdatei kopieren 
+### 3. Umgebungsdatei kopieren 
 cp .env.example .env
 
-4. Umgebungsdatei für SQLite konfigurieren:
-"DB_CONNECTION=sqlite"
-"# DB_HOST=127.0.0.1"
-"# DB_PORT=3306"
-"DB_DATABASE=database.sqlite"
-"# DB_USERNAME=root"
-"# DB_PASSWORD="
+### 4. Umgebungsdatei für SQLite konfigurieren:
+"DB_CONNECTION=sqlite"  
+"# DB_HOST=127.0.0.1"  
+"# DB_PORT=3306"  
+"DB_DATABASE=database.sqlite"  
+"# DB_USERNAME=root"  
+"# DB_PASSWORD="  
 
-5. Anwendungsschlüssel generieren:
+### 5. Anwendungsschlüssel generieren:
 php artisan key:generate
 
-6. Migrationen und ggf. Seed-Daten ausführen:
+### 6. Migrationen und ggf. Seed-Daten ausführen:
 php artisan migrate
 
-7. Speicherordner verlinken (für Bild-Uploads):
+### 7. Speicherordner verlinken (für Bild-Uploads):
 php artisan storage:link
 
-8. Assets bauen:
+### 8. Assets bauen:
 npm run build
 
-9. Lokalen Server starten:
+### 9. Lokalen Server starten:
 php artisan serve
 
 Die Anwendung ist unter http://localhost:8000 erreichbar.
